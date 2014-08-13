@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Java Script</title>
+    </head>
+    <body>
+        Hello Java Script!
+    </body>
+    <script type="text/javascript">
+        
+		/* 这里写JavaScropt程序 */
+        //alert('Hello javascript');
+		//直接调用alert方法实际就是在调用widnow的alert方法
+		window.alert('Hello JS');
+		
+		//知识点
+		//1 JS引擎
+		/*
+		每个浏览器都有一个JS引擎，
+		JS引擎负责执行JS代码
+		目前最快的JS引擎是google的v8
+		*/
+		//2 宿主对象
+		/*
+		浏览器的宿主对象就是window
+	    在JS代码中声明的全局变量实际都是window的属性
+		*/
+		
+		//JS全局变量的声明，直接写变量名即可，可.
+		a = 100;
+		
+		alert(window.a);
+    </script>
+</html>
+
+
+
+
+
+
+

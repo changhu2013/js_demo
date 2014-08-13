@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Java Script</title>
+    </head>
+    <body>
+        <span>Function:</span>
+		<hr>
+		
+    </body>
+	<script type="text/javascript">
+		
+		//定义一个方法
+		function add(a, b){
+			console.log('a=' +a);
+			console.log('b=' +b);
+			return a + b;
+		}
+		
+		//调用add方法
+		var c = add(100, 50);
+		console.log(c);//150
+		
+		var d = add('ddd', 'DDD');
+		console.log(d);
+		
+		console.log(typeof add);//function
+		
+		//第二种声明方法的方式
+		var func = function(a, b){
+			return a + b;
+		};
+		
+		console.log(func(100, 50));
+		
+		//
+		var func2 = function(){
+			var r = 0;
+			for(var i = 0, len = arguments.length; i < len; i++){
+				r += arguments[i];
+			}
+			return r;
+		};
+		
+		console.log(func2(100));
+		console.log(func2(100, 50));
+		console.log(func2(100, 50, 50));
+		console.log(func2(100, 50, 50, 50));
+		
+		//
+		var func3 = function(){
+			return 'func3';
+		}
+		
+		var func4 = function(func){
+			return func();
+		}
+		
+		//() 是一个运算符， 是对方法的执行
+		var r = func4(func3);
+		
+		console.log(r);
+	</script>
+</html>	
