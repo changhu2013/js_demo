@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>JS & HTML</title>
+		<style type="text/css">
+			.c1 {
+			    font-size : 36px;
+			}
+		</style>
+   <head>
+   <body>
+         <div id="d1">dddddd</div>
+		 <div id="d2">DDDDDD</div>
+   </body>
+   <script type="text/javascript">
+        //window.alert('js & html');
+		//对HTML的操作都通过document对象来实现的
+		
+		//声明一个变量来承接document
+		var DOC = document;
+		
+		//write方法实现在body节点内写入内容
+		//可以直接写入html标签
+		DOC.write('<a id="a1" style="color:red;" href="http://www.baidu.com">baidu</a>');
+		
+		//通过getElementById方法获取某id的节点
+		//传入参数为某标签的ID
+		var e1 = DOC.getElementById('d1');
+		//innerHTML是节点的内容
+		var e1i = e1.innerHTML;
+		console.log(e1i);
+		
+		//可以通过直接修改innerHTML来修改节点的内容
+		e1.innerHTML = 'ddddddddddddddddddddddddddd';
+		
+		//通过getElementsByTagName获取所有的某种标签节点
+		//传入参数为标签名字
+		var els = DOC.getElementsByTagName('div')
+		for(var i = 0, len = els.length; i < len; i++){
+		    var temp = els[i];
+			console.log(temp.innerHTML);
+		}
+		
+		//
+		var e2 = DOC.getElementById('a1');
+		e2.innerHTML = 'sina';
+		//通过【节点.属性名】来实现对节点属性的访问和修改
+		e2.href = 'http://www.sina.com.cn';
+		
+		//e2.style = 'font-size:36px;';
+		//e2.style.fontSize = '36px'
+		
+		//e2.class = 'c1';
+		e2.className = 'c1';
+		
+   </script>
+</html>
